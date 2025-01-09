@@ -6,16 +6,14 @@ spec:
   replicas: 3
   selector:
     matchLabels:
-      team : nginx-selector
+      app : nginx # service mei bhi same hona chahiye
   template :
     metadata:
       labels:
-        team : nginx-selector
+        app : nginx
     spec:
       containers:
         - name: nginx
-          image: nginx2
+          image: nginx
           ports:
             - containerPort: 80
-               
-
